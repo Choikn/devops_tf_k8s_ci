@@ -98,3 +98,26 @@
 - 수정 및 추가작업
   - infra/ 내 수정및 추가작업
     - terraform.tfvars
+  - git 관련 id 조회
+    ```
+        # github_owner_id, github_ci_repository_id 값 획득
+        # gh 명령어 사용
+        # 윈도우
+          # 설치
+          winget install --id GitHub.cli
+
+        # 맥
+          # 설치
+          brew install gh
+
+        # 공통
+          # 로그인
+          gh auth login
+          ---
+          GitHub.com
+          HTTPS
+          Login with a web browser
+          Press Enter to open https://github.com/login/device in your browser
+          로그인 수행 > continue > 발급퇸 키 8자리 붙여넣기 > continue
+          `Au... github` 버튼 클릭 > 설정완료
+    ```
