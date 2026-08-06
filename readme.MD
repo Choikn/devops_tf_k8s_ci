@@ -130,3 +130,36 @@
           "repository_id": 1324570033
         }
     ```
+
+## 전체 인프라 구성 및 최초 web/was 이미지 빌드 -> ECR Push : ci workflow 진행
+- 최초 (인프라구성) / 수정된 인프라 배포
+```
+./project.sh deploy
+./project.bat deploy
+```
+
+- ci 셋업 1회 진행
+```
+./setup-ci.bat choikn/devops_tf_k8s_ci
+./setup-ci.sh choikn/devops_tf_k8s_ci
+```
+
+- 조정
+  - ci.yml
+    - 5, 12 라인 : 브랜치 대상 `main` 수정
+
+- ci 테스트
+  - ~/app/web/index.html
+    ```
+      v 3 => v3
+    ```
+
+- git 반영
+  - github actions 작동되는 영역 제한 : ci.yml 기록
+    ```
+      - "apps/**"
+      - "infra/**"
+      - "scripts/ci/**"
+      - ".github/workflows/ci.yml"
+    ```
+  - add -> commit -> push
