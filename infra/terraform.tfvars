@@ -17,9 +17,9 @@ db_allocated_storage = 20
 # GitHub Actions CI, OIDC 관련 추가
 # ------------------------------------------------------------
 enable_github_actions_ci = true
-github_owner             = "Choikn"             # 본 프로젝트의 깃허브의 소유주
-github_ci_repository     = "devops_tf_k8s_ci"   # 본 프로젝트 저장소 이름
-github_ci_branch         = "main" # 어떤 브랜치에서만 ECR push를 위한 인증 허가할 것인가
+github_owner             = "Choikn"           # 본 프로젝트의 깃허브의 소유주
+github_ci_repository     = "devops_tf_k8s_ci" # 본 프로젝트 저장소 이름
+github_ci_branch         = "main"             # 어떤 브랜치에서만 ECR push를 위한 인증 허가할 것인가
 # 최초라면 true, 만약 1번 이상 수행 => aws내 iam 본인 계정에 등록되어있다면 false로 결정
 create_github_oidc_provider = false
 # 조회발급 -> 추후 세팅 => git 로그인 처리후 조회 -> 모두 숫자임
