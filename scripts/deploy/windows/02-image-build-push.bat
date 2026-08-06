@@ -4,7 +4,7 @@ chcp 65001 >nul
 
 for %%I in ("%~dp0..\..\..") do set "PROJECT_ROOT=%%~fI"
 set "INFRA_DIR=%PROJECT_ROOT%\infra"
-if not defined IMAGE_TAG set "IMAGE_TAG=k8s-auto"
+if not defined IMAGE_TAG set "IMAGE_TAG=dev-latest"
 
 call :terraform_output AWS_REGION aws_region || exit /b 1
 call :terraform_output WEB_REPO web_ecr_repository_url || exit /b 1

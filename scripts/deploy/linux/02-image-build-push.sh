@@ -5,7 +5,7 @@ set -Eeuo pipefail
 # 향후 이 파일의 역할은 GitHub Actions CI Workflow로 이전한다.
 PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../../.." && pwd)"
 INFRA_DIR="${PROJECT_ROOT}/infra"
-IMAGE_TAG="${IMAGE_TAG:-k8s-auto}"
+IMAGE_TAG="${IMAGE_TAG:-dev-latest}"
 
 required_commands=(terraform aws docker)
 for command_name in "${required_commands[@]}"; do
