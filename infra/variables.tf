@@ -1,7 +1,7 @@
 variable "aws_region" {
   description = "AWS 리전"
   type        = string
-  default     = "ap-northeast-2"
+  default     = "ap-southeast-1"
 }
 
 variable "project_name" {
@@ -25,7 +25,7 @@ variable "vpc_cidr" {
 variable "availability_zones" {
   description = "Multi-AZ 구성에 사용할 가용 영역 2개"
   type        = list(string)
-  default     = ["ap-northeast-2a", "ap-northeast-2c"]
+  default     = ["ap-southeast-1a", "ap-southeast-1c"]
 
   validation {
     condition     = length(var.availability_zones) == 2
